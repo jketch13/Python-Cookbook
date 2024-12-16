@@ -1,11 +1,9 @@
-pip install forex-python
-
 from forex_python.converter import CurrencyRates
 
 # Function to convert currencies
 def convert_currency(amount, from_currency, to_currency):
     c = CurrencyRates()
-    rate = c.get_rate(from_currency, to_currency)
+    rate = c.get_rates(from_currency, to_currency)
     converted_amount = amount * rate
     return converted_amount
 
